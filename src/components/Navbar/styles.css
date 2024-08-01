@@ -1,0 +1,16 @@
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuItemButton {
+  border: none;
+  color: #21888e;
+  background-color: #c1f1f4;
+}

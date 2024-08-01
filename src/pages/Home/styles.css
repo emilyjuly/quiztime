@@ -1,0 +1,121 @@
+.container-home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container-circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(193, 241, 244, 0.8),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(193, 241, 244, 0.7),
+      transparent 50%
+    ),
+    #21888e;
+  color: #3f3f3f;
+  border-radius: 50%;
+  padding: 15px;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.circle-1 {
+  position: relative;
+  animation: moveUpDown 3s infinite ease-in-out;
+}
+
+.circle-1::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 25rem;
+  height: 25rem;
+  background-color: rgba(33, 135, 142, 0.07);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle-2 {
+  position: absolute;
+  right: -10rem;
+  top: 15rem;
+  width: 15rem;
+  height: 15rem;
+  z-index: -1;
+  filter: blur(1.5px);
+}
+
+.circle-3 {
+  position: absolute;
+  left: -10rem;
+  top: 15rem;
+  width: 15rem;
+  height: 15rem;
+  z-index: -1;
+  filter: blur(1.5px);
+}
+
+.title {
+  font-size: 20px;
+}
+
+.quiz-name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.informations-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+}
+
+.container-title {
+  margin-top: 30px;
+}
+
+.title-home {
+  font-size: 50px;
+  color: #21888e;
+}
+
+.container-text-home {
+  background-color: #21888e;
+  border-radius: 0 10px 10px 60px;
+  padding: 10px 10px 10px 40px;
+}
+
+.text-home {
+  color: #fff6ec;
+  font-size: 15px;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Movendo para cima */
+  }
+  100% {
+    transform: translateY(0); /* Voltando para a posição original */
+  }
+}
