@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.image-navbar {
+  width: 7rem;
+}
+
 .options {
   display: flex;
   align-items: center;
@@ -13,4 +17,23 @@
   border: none;
   color: #21888e;
   background-color: #c1f1f4;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .container-navbar {
+    padding: 2rem;
+  }
+
+  .image-navbar {
+    width: 10rem;
+  }
+
+  .options {
+    gap: 6rem;
+  }
+
+  .menuItemButton {
+    font-size: 20px;
+  }
 }

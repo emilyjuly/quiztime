@@ -5,7 +5,7 @@ const navbar = () => {
 
   return (
     <div className="container-navbar">
-      <img alt="Logo quiztime" src="/logo.svg" width={100} />
+      <img alt="Logo quiztime" src="/logo.svg" className='image-navbar' />
       <div className="options">
         {menuItems.map((menuItem) => (
           <button type="button" title={menuItem} className="menuItemButton">
