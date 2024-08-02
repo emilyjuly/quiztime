@@ -5,6 +5,7 @@
 
 .image-navbar {
   width: 7rem;
+  cursor: pointer;
 }
 
 .options {

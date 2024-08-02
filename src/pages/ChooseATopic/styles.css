@@ -14,6 +14,7 @@
 .subtitle-choose {
   font-size: 15px;
   margin-left: 3px;
+  color: #3f3f3f;
 }
 
 .container-tag {
@@ -66,16 +67,6 @@
   align-items: center;
   gap: 10px;
   width: 20rem;
-}
-
-.level-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #21888e;
-  width: 4.5rem;
-  height: 1.2rem;
-  border-radius: 5px;
 }
 
 .card-choose-title {

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
+import Navbar from '../../components/Navbar/navbar';
+import ChooseATopic from '../ChooseATopic/chooseATopic';
 
 interface Circle {
   title: string;
@@ -42,31 +44,35 @@ const home = () => {
   }, []);
 
   return (
-    <div className="container-home">
-      <div className="container-circle">
-        {circles.map(({ position, title }, index) => (
-          <div className={`circle circle-${index + 1}`} key={index}>
-            <p className="title">{`#${position} Topic`}</p>
-            <p className="quiz-name">{title}</p>
-            <p className="informations-circle">
-              <span>3min</span>
-              <span>10 questions</span>
+    <div className="container-app">
+      <Navbar />
+      <div className="container-home">
+        <div className="container-circle">
+          {circles.map(({ position, title }, index) => (
+            <div className={`circle circle-${index + 1}`} key={index}>
+              <p className="title">{`#${position} Topic`}</p>
+              <p className="quiz-name">{title}</p>
+              <p className="informations-circle">
+                <span>3min</span>
+                <span>10 questions</span>
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="container-title">
+          <h1 className="title-home">
+            Improve <br />
+            your mind
+          </h1>
+          <div className="container-text-home">
+            <p className="text-home">
+              Do you want to test your technology knowledge? Choose a theme and
+              have fun!
             </p>
           </div>
-        ))}
-      </div>
-      <div className="container-title">
-        <h1 className="title-home">
-          Improve <br />
-          your mind
-        </h1>
-        <div className="container-text-home">
-          <p className="text-home">
-            Do you want to test your technology knowledge? Choose a theme and
-            have fun!
-          </p>
         </div>
       </div>
+      <ChooseATopic />
     </div>
   );
 };
