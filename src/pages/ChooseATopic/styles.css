@@ -87,7 +87,6 @@
   padding: 7px 30px 7px 30px;
   border-radius: 5px;
   font-weight: 600;
-  letter-spacing: 0.5px;
   cursor: pointer;
   margin-bottom: 10px;
   width: 100px;
@@ -95,8 +94,8 @@
 
 @media (min-width: 768px) {
   .container-choose {
-    margin-top: 1rem;
-    padding: 60px;
+    margin-top: 3rem;
+    padding: 30px;
   }
 
   .title-choose {
@@ -120,6 +119,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 60px auto 0 auto;
-    gap: 5rem 16rem;
+    gap: 5rem 10rem;
   }
 }

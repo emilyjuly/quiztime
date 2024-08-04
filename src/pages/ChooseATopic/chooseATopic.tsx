@@ -6,7 +6,7 @@ import Tag from '../../components/Tag/tag';
 
 const levelsDefault = ['Easy', 'Mid', 'Hard'];
 
-const chooseATopic = () => {
+const ChooseATopic = () => {
   const navigate = useNavigate();
   const buttons = ['All', 'Easy', 'Mid', 'Hard'];
   const [filter, setFilter] = useState('All');
@@ -26,9 +26,8 @@ const chooseATopic = () => {
         {buttons.map((button) => (
           <div
             key={button}
-            className={`container-tag-choose ${
-              filter === button ? 'container-tag-choose-active' : ''
-            }`}
+            className={`container-tag-choose ${filter === button ? 'container-tag-choose-active' : ''
+              }`}
           >
             <button
               onClick={() => handleFilter(button)}
@@ -68,4 +67,4 @@ const chooseATopic = () => {
   );
 };
 
-export default chooseATopic;
+export default ChooseATopic;

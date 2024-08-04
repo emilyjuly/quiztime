@@ -1,12 +1,14 @@
 import './styles.css';
-import Navbar from '../../components/Navbar/navbar';
+import Navbar from '../../components/Navbar/Navbar';
+import QuizContent from '../../components/QuizContent/QuizContent';
+import QuizResult from '../../components/QuizResult/QuizResult';
 import Tag from '../../components/Tag/tag';
 
-const quiz = () => {
+const Quiz = () => {
   return (
-    <div className="quiz-container">
+    <>
       <Navbar />
-      <div className="quiz-container-questions">
+      <div className="quiz-page-container">
         <h1 className="quiz-title">UX/UI Design</h1>
         <div className="quiz-tag-container">
           <Tag content="Easy" />
@@ -15,34 +17,10 @@ const quiz = () => {
         <div className="quiz-progress-container">
           <div className="quiz-progress-bar"></div>
         </div>
-        <span className="quiz-number-question">Question 01</span>
-        <span className="quiz-question">What does "UX" stand for?</span>
-        <div className="quiz-options-question-container">
-          <button title="Option" type="button" className="quiz-option">
-            User Examination
-          </button>
-          <button title="Option" type="button" className="quiz-option">
-            User Experience
-          </button>
-          <button title="Option" type="button" className="quiz-option">
-            User Extension
-          </button>
-          <button title="Option" type="button" className="quiz-option">
-            User Exercise
-          </button>
-        </div>
-        <div className="quiz-next-button-container">
-          <button
-            type="button"
-            title="Next"
-            className="quiz-next-button-disabled"
-          >
-            NEXT
-          </button>
-        </div>
-      </div>
-    </div>
+        <QuizContent />
+        <QuizResult />
+      </div></>
   );
 };
 
-export default quiz;
+export default Quiz;

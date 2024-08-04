@@ -1,6 +1,19 @@
 .container-navbar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.container-navbar.scrolled {
+  background-color: #FFF6EC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .image-navbar {
@@ -12,20 +25,21 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-right: 3rem;
 }
 
 .menuItemButton {
   border: none;
   color: #21888e;
-  background-color: #c1f1f4;
   cursor: pointer;
+  background-color: transparent;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
-  .container-navbar {
-    padding: 2rem;
-  }
-
   .image-navbar {
     width: 10rem;
   }

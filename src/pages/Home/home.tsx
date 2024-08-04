@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './styles.css';
-import Navbar from '../../components/Navbar/navbar';
-import ChooseATopic from '../ChooseATopic/chooseATopic';
+import Navbar from '../../components/Navbar/Navbar';
+import ChooseATopic from '../ChooseATopic/ChooseATopic';
 
 interface Circle {
   title: string;
   position: string;
 }
 
-const home = () => {
+const Home = () => {
   const [circles, setCircles] = useState<Circle[]>([
     {
       title: 'Frontend',
@@ -23,6 +23,15 @@ const home = () => {
       position: '01',
     },
   ]);
+
+  const homeSectionRef = useRef<HTMLDivElement>(null);
+  const topicsSectionRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,8 +54,11 @@ const home = () => {
 
   return (
     <div className="container-app">
-      <Navbar />
-      <div className="container-home">
+      <Navbar
+        onHomeClick={() => handleScrollToSection(homeSectionRef)}
+        onTopicsClick={() => handleScrollToSection(topicsSectionRef)}
+      />
+      <div ref={homeSectionRef} id="home-section" className="container-home">
         <div className="container-circle">
           {circles.map(({ position, title }, index) => (
             <div className={`circle circle-${index + 1}`} key={index}>
@@ -72,9 +84,11 @@ const home = () => {
           </div>
         </div>
       </div>
-      <ChooseATopic />
+      <div ref={topicsSectionRef} id="topics-section">
+        <ChooseATopic />
+      </div>
     </div>
   );
 };
 
-export default home;
+export default Home;
