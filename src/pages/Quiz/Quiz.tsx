@@ -54,12 +54,6 @@ const Quiz = () => {
           <Tag content={level ? toCapitalize(level ?? '') : ''} />
           <Tag content="Easy" />
         </div>
-        <div className="quiz-progress-container">
-          {questions.length > 0 &&
-            questions.map((index) => (
-              <div key={index} className="quiz-progress-bar" />
-            ))}
-        </div>
         <QuizContent questions={questions} />
         <QuizResult />
       </div>
