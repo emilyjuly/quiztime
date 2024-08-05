@@ -1,0 +1,85 @@
+[
+  {
+    "question": "What does 'API' stand for?",
+    "type": "one choice",
+    "options": [
+      "Application Programming Interface",
+      "Application Process Interface",
+      "Application Performance Interface",
+      "Application Programming Interaction"
+    ],
+    "answer": "Application Programming Interface",
+    "explanation": "'API' stands for Application Programming Interface, which allows different software applications to communicate with each other."
+  },
+  {
+    "question": "True or False: In a RESTful API, 'GET' is used to update a resource.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "In a RESTful API, 'GET' is used to retrieve a resource, not update it. 'PUT' or 'POST' methods are used to update resources."
+  },
+  {
+    "question": "Which of the following is a relational database management system?",
+    "type": "one choice",
+    "options": ["MongoDB", "Redis", "MySQL", "Cassandra"],
+    "answer": "MySQL",
+    "explanation": "MySQL is a popular relational database management system. MongoDB and Cassandra are NoSQL databases, and Redis is an in-memory data structure store."
+  },
+  {
+    "question": "What is the primary function of a server?",
+    "type": "one choice",
+    "options": [
+      "To browse the internet",
+      "To store and manage data",
+      "To design websites",
+      "To create graphics"
+    ],
+    "answer": "To store and manage data",
+    "explanation": "The primary function of a server is to store, process, and manage data, providing services to client devices."
+  },
+  {
+    "question": "Fill in the blank: A _______ is a set of rules that allow programs to communicate with each other.",
+    "type": "input",
+    "answer": "protocol",
+    "explanation": "A protocol is a set of rules that define how data is transmitted and received over a network, enabling communication between programs."
+  },
+  {
+    "question": "What does 'SQL' stand for?",
+    "type": "one choice",
+    "options": [
+      "Structured Query Language",
+      "Sequential Query Language",
+      "Structured Question Language",
+      "Sequential Question Language"
+    ],
+    "answer": "Structured Query Language",
+    "explanation": "'SQL' stands for Structured Query Language, which is used to manage and manipulate relational databases."
+  },
+  {
+    "question": "True or False: JSON is commonly used for data interchange in web applications.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "JSON (JavaScript Object Notation) is a lightweight data interchange format commonly used in web applications to transmit data between a server and a client."
+  },
+  {
+    "question": "Which of the following is used to interact with a database in a backend application?",
+    "type": "one choice",
+    "options": ["HTML", "CSS", "SQL", "XML"],
+    "answer": "SQL",
+    "explanation": "SQL (Structured Query Language) is used to interact with and manage relational databases in backend applications."
+  },
+  {
+    "question": "Which HTTP method is typically used to create a new resource on a server?",
+    "type": "one choice",
+    "options": ["GET", "POST", "DELETE", "PATCH"],
+    "answer": "POST",
+    "explanation": "The 'POST' HTTP method is typically used to create a new resource on a server. 'GET' retrieves data, 'DELETE' removes data, and 'PATCH' updates data."
+  },
+  {
+    "question": "Fill in the blank: _______ is a software tool that helps manage the interactions between the client and the database.",
+    "type": "input",
+    "answer": "middleware",
+    "explanation": "Middleware is software that provides common services and capabilities to applications outside of what's offered by the operating system, facilitating communication and data management."
+  }
+]

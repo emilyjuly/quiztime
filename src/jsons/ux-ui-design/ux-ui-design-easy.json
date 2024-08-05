@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What does 'UX' stand for?",
+    "type": "one choice",
+    "options": [
+      "User Experience",
+      "User Exchange",
+      "User Expansion",
+      "User Execution"
+    ],
+    "answer": "User Experience",
+    "explanation": "'UX' stands for User Experience, which refers to the overall experience a user has when interacting with a product or service."
+  },
+  {
+    "question": "True or False: A wireframe is a detailed visual representation of a final product.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "A wireframe is a basic, low-fidelity visual guide that represents the skeletal framework of a website or app."
+  },
+  {
+    "question": "What is the primary goal of usability testing?",
+    "type": "one choice",
+    "options": [
+      "To evaluate a product's functionality",
+      "To assess the user interface design",
+      "To measure the ease of use",
+      "To test the product's marketability"
+    ],
+    "answer": "To measure the ease of use",
+    "explanation": "Usability testing focuses on evaluating how easy and user-friendly a product is for end users."
+  },
+  {
+    "question": "Which of the following is a common tool used for creating wireframes?",
+    "type": "one choice",
+    "options": ["Photoshop", "Sketch", "InDesign", "Illustrator"],
+    "answer": "Sketch",
+    "explanation": "Sketch is a popular design tool used for creating wireframes, prototypes, and visual designs."
+  },
+  {
+    "question": "Fill in the blank: A _______ is a detailed representation of a user interface, including colors, typography, and imagery.",
+    "type": "input",
+    "answer": "mockup",
+    "explanation": "A mockup is a high-fidelity, detailed visual representation of a user interface, including design elements such as colors, typography, and imagery."
+  },
+  {
+    "question": "What does 'UI' stand for?",
+    "type": "one choice",
+    "options": [
+      "User Instruction",
+      "User Interaction",
+      "User Interface",
+      "User Integration"
+    ],
+    "answer": "User Interface",
+    "explanation": "'UI' stands for User Interface, which refers to the space where interactions between humans and machines occur."
+  },
+  {
+    "question": "True or False: User personas are fictional characters created to represent different user types.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "User personas are fictional characters that represent different user types and help designers understand user needs, goals, and behaviors."
+  },
+  {
+    "question": "What is a common method for gathering user feedback?",
+    "type": "one choice",
+    "options": [
+      "Surveys",
+      "Brainstorming",
+      "Heuristic Evaluation",
+      "Benchmarking"
+    ],
+    "answer": "Surveys",
+    "explanation": "Surveys are a common method for gathering user feedback by asking users to respond to questions about their experiences and preferences."
+  },
+  {
+    "question": "Which design principle emphasizes consistency and predictability in user interfaces?",
+    "type": "one choice",
+    "options": ["Affordance", "Feedback", "Visibility", "Standards"],
+    "answer": "Standards",
+    "explanation": "Standards in design emphasize consistency and predictability, ensuring that similar elements behave in a similar way."
+  },
+  {
+    "question": "Fill in the blank: ________ design is a user-centered design approach that considers the needs and limitations of the end users throughout the design process.",
+    "type": "input",
+    "answer": "Human-centered",
+    "explanation": "Human-centered design is a design approach that prioritizes the needs, wants, and limitations of the end users at every stage of the design process."
+  }
+]

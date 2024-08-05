@@ -1,0 +1,85 @@
+[
+  {
+    "question": "What does 'HTML' stand for?",
+    "type": "one choice",
+    "options": [
+      "HyperText Markup Language",
+      "Hyperlink Text Markup Language",
+      "Hyperlinking Text Markup Language",
+      "HyperText Making Language"
+    ],
+    "answer": "HyperText Markup Language",
+    "explanation": "'HTML' stands for HyperText Markup Language, which is the standard language for creating web pages."
+  },
+  {
+    "question": "True or False: CSS is used to define the structure of a web page.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "CSS (Cascading Style Sheets) is used to style and layout web pages, not to define their structure. HTML defines the structure."
+  },
+  {
+    "question": "Which of the following is a JavaScript framework?",
+    "type": "one choice",
+    "options": ["Django", "React", "Laravel", "Flask"],
+    "answer": "React",
+    "explanation": "React is a popular JavaScript library for building user interfaces. Django and Flask are Python frameworks, and Laravel is a PHP framework."
+  },
+  {
+    "question": "What is the purpose of the 'alt' attribute in an HTML image tag?",
+    "type": "one choice",
+    "options": [
+      "To style the image",
+      "To link the image to a URL",
+      "To provide alternative text for the image",
+      "To specify the image size"
+    ],
+    "answer": "To provide alternative text for the image",
+    "explanation": "The 'alt' attribute provides alternative text for an image, which is displayed if the image cannot be loaded and is important for accessibility."
+  },
+  {
+    "question": "Fill in the blank: In CSS, _______ is used to apply styles to elements with a specific class.",
+    "type": "input",
+    "answer": ". (dot)",
+    "explanation": "In CSS, a dot (.) followed by the class name is used to apply styles to elements with that specific class."
+  },
+  {
+    "question": "What does 'CSS' stand for?",
+    "type": "one choice",
+    "options": [
+      "Cascading Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets",
+      "Computer Style Sheets"
+    ],
+    "answer": "Cascading Style Sheets",
+    "explanation": "'CSS' stands for Cascading Style Sheets, which is used to describe the presentation of a document written in HTML or XML."
+  },
+  {
+    "question": "True or False: JavaScript can be used to make web pages interactive.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "JavaScript is a programming language used to create dynamic and interactive effects on web pages."
+  },
+  {
+    "question": "Which HTML tag is used to define a hyperlink?",
+    "type": "one choice",
+    "options": ["<a>", "<link>", "<href>", "<hyperlink>"],
+    "answer": "<a>",
+    "explanation": "The <a> tag is used to define a hyperlink in HTML."
+  },
+  {
+    "question": "Which of the following CSS properties is used to change the text color?",
+    "type": "one choice",
+    "options": ["font-color", "text-color", "color", "background-color"],
+    "answer": "color",
+    "explanation": "The 'color' property in CSS is used to change the text color of an element."
+  },
+  {
+    "question": "Fill in the blank: The _______ tag is used in HTML to embed a JavaScript file.",
+    "type": "input",
+    "answer": "<script>",
+    "explanation": "The <script> tag is used in HTML to embed or reference a JavaScript file within a web page."
+  }
+]

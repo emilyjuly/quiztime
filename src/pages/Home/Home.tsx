@@ -24,15 +24,6 @@ const Home = () => {
     },
   ]);
 
-  const homeSectionRef = useRef<HTMLDivElement>(null);
-  const topicsSectionRef = useRef<HTMLDivElement>(null);
-
-  const handleScrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCircles((prevCircles) => {
@@ -54,11 +45,8 @@ const Home = () => {
 
   return (
     <div className="container-app">
-      <Navbar
-        onHomeClick={() => handleScrollToSection(homeSectionRef)}
-        onTopicsClick={() => handleScrollToSection(topicsSectionRef)}
-      />
-      <div ref={homeSectionRef} id="home-section" className="container-home">
+      <Navbar />
+      <section className="container-home" id="home">
         <div className="container-circle">
           {circles.map(({ position, title }, index) => (
             <div className={`circle circle-${index + 1}`} key={index}>
@@ -83,10 +71,10 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div ref={topicsSectionRef} id="topics-section">
+      </section>
+      <section id="topics">
         <ChooseATopic />
-      </div>
+      </section>
     </div>
   );
 };

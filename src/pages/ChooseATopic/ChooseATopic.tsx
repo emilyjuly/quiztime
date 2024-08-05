@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './styles.css';
 import { HiLockClosed } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
-import Tag from '../../components/Tag/tag';
+import Tag from '../../components/Tag/Tag';
 
 const levelsDefault = ['Easy', 'Mid', 'Hard'];
 
@@ -18,6 +18,15 @@ const ChooseATopic = () => {
     button === 'All' ? setLevels([...levelsDefault]) : setLevels([button]);
   };
 
+  const handleStart = (topic: string, level: string) => {
+    const selectedTopic = topic === 'UX/UI Design' ? 'UX' : topic;
+    navigate(
+      `/quiz?topic=${encodeURIComponent(
+        selectedTopic,
+      )}&level=${encodeURIComponent(level)}`,
+    );
+  };
+
   return (
     <div className="container-choose">
       <span className="title-choose">Choose a topic</span>
@@ -26,8 +35,9 @@ const ChooseATopic = () => {
         {buttons.map((button) => (
           <div
             key={button}
-            className={`container-tag-choose ${filter === button ? 'container-tag-choose-active' : ''
-              }`}
+            className={`container-tag-choose ${
+              filter === button ? 'container-tag-choose-active' : ''
+            }`}
           >
             <button
               onClick={() => handleFilter(button)}
@@ -52,7 +62,7 @@ const ChooseATopic = () => {
                 <span>10 questions</span>
               </span>
               <button
-                onClick={() => navigate('/quiz')}
+                onClick={() => handleStart(topic, level)}
                 className="start-button"
                 type="button"
                 title="Start"
