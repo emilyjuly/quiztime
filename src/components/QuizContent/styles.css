@@ -1,37 +1,7 @@
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(200%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-200%);
-  }
-}
-
 .quiz-question-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-}
-
-.quiz-question-enter {
-  animation: slideIn 0.5s forwards;
-}
-
-.quiz-question-exit {
-  animation: slideOut 0.5s forwards;
 }
 
 .quiz-container {

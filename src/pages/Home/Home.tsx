@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 import Navbar from '../../components/Navbar/Navbar';
 import ChooseATopic from '../ChooseATopic/ChooseATopic';

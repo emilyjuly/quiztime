@@ -12,11 +12,11 @@ import './styles.css';
 const Quiz = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const topic =
+  const topic: string | undefined =
     queryParams.get('topic') === 'ux'
       ? 'ux/ui design'
       : queryParams.get('topic')?.toLowerCase();
-  const level = queryParams.get('level')?.toLowerCase();
+  const level: string | undefined = queryParams.get('level')?.toLowerCase();
   const [timeLeft, setTimeLeft] = useState(180);
   const timerRef = useRef<number | null>(null);
   const [isFinished, setIsFinished] = useState(false);

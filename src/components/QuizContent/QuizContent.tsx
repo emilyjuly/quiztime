@@ -11,7 +11,6 @@ interface QuizContentProps {
 const QuizContent = ({ onFinish }: QuizContentProps) => {
   const { questions, setAnswers, answers } = useQuestions();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [animationClass, setAnimationClass] = useState('quiz-question-enter');
 
   if (questions.length === 0) {
     return <div>Loading...</div>;
@@ -22,20 +21,16 @@ const QuizContent = ({ onFinish }: QuizContentProps) => {
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setAnimationClass('quiz-question-exit');
       setTimeout(() => {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
-        setAnimationClass('quiz-question-enter');
       }, 300);
     }
   };
 
   const handlePrev = () => {
     if (currentQuestionIndex > 0) {
-      setAnimationClass('quiz-question-exit');
       setTimeout(() => {
         setCurrentQuestionIndex(currentQuestionIndex - 1);
-        setAnimationClass('quiz-question-enter');
       }, 300);
     }
   };
@@ -61,7 +56,7 @@ const QuizContent = ({ onFinish }: QuizContentProps) => {
         {questions.length > 0 &&
           questions.map((question, index) => (
             <div
-              key={index}
+              key={question.question}
               className={`quiz-progress-bar ${
                 index === currentQuestionIndex ? 'quiz-progress-bar-active' : ''
               }`}
@@ -75,7 +70,7 @@ const QuizContent = ({ onFinish }: QuizContentProps) => {
             : currentQuestionIndex + 1
         }`}</span>
         <span className="quiz-question">{currentQuestion.question}</span>
-        <div className="quiz-options-question-container">
+        <div className={'quiz-options-question-container'}>
           {currentQuestion.options ? (
             currentQuestion.options.map((option, index) => (
               <button
