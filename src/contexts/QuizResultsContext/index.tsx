@@ -14,6 +14,8 @@ interface QuestionsContextType {
   answers: string[];
   setAnswers: (answers: string[]) => void;
   resetQuestions: () => void;
+  userLevel: string;
+  setUserLevel: (level: string) => void;
 }
 
 const QuestionsContext = createContext<QuestionsContextType | undefined>(
@@ -25,6 +27,7 @@ export const QuestionsProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<string[]>([]);
+  const [userLevel, setUserLevel] = useState<string>('Easy');
 
   const resetQuestions = () => {
     setQuestions([]);
@@ -33,7 +36,15 @@ export const QuestionsProvider: React.FC<{ children: ReactNode }> = ({
 
   return (
     <QuestionsContext.Provider
-      value={{ questions, setQuestions, answers, setAnswers, resetQuestions }}
+      value={{
+        questions,
+        setQuestions,
+        answers,
+        setAnswers,
+        resetQuestions,
+        userLevel,
+        setUserLevel,
+      }}
     >
       {children}
     </QuestionsContext.Provider>

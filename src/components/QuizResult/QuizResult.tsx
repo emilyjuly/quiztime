@@ -24,7 +24,7 @@ type Question = {
 };
 
 const QuizResult = () => {
-  const { questions, answers } = useQuestions();
+  const { questions, answers, setUserLevel, userLevel } = useQuestions();
 
   const [modal, setModal] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -67,11 +67,20 @@ const QuizResult = () => {
         };
       });
       setPoints(newPoints);
+      handleUserLevel(newPoints);
       setResults(newResults);
     };
 
     handleAnswers();
   }, [answers, questions]);
+
+  const handleUserLevel = (points: number) => {
+    if (userLevel === 'Easy') {
+      points > 5 && setUserLevel('Mid');
+    } else if (userLevel === 'Mid') {
+      points > 5 && setUserLevel('Hard');
+    }
+  };
 
   const openModal = (isCorrect: boolean, index: number) => {
     const positionIndex = index + 1;

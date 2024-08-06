@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import './styles.css';
 import { useNavigate } from 'react-router-dom';
+
+import './styles.css';
 
 interface MenuItem {
   href: string;

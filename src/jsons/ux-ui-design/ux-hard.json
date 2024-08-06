@@ -1,0 +1,107 @@
+[
+  {
+    "question": "In UX design, what is the primary goal of conducting a heuristic evaluation?",
+    "type": "one choice",
+    "options": [
+      "To assess usability against established heuristics",
+      "To gather user feedback through surveys",
+      "To create high-fidelity prototypes",
+      "To analyze user behavior with analytics tools"
+    ],
+    "answer": "To assess usability against established heuristics",
+    "explanation": "Heuristic evaluation involves assessing usability based on established heuristics or guidelines to identify potential usability issues."
+  },
+  {
+    "question": "True or False: The 'Kano Model' is used to categorize user needs into basic, performance, and excitement factors.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "The 'Kano Model' categorizes user needs into basic, performance, and excitement factors, helping to prioritize features based on their impact on user satisfaction."
+  },
+  {
+    "question": "Which of the following is a key principle of Gestalt psychology applied in UX/UI design?",
+    "type": "one choice",
+    "options": [
+      "Law of Proximity",
+      "Law of Demographics",
+      "Law of Brand Consistency",
+      "Law of Typography"
+    ],
+    "answer": "Law of Proximity",
+    "explanation": "The Law of Proximity is a key principle in Gestalt psychology, which suggests that elements placed close to each other are perceived as a group."
+  },
+  {
+    "question": "Fill in the blank: The _______ technique is used to simulate how users interact with a product in the early stages of design.",
+    "type": "input",
+    "answer": "paper prototyping",
+    "explanation": "Paper prototyping involves creating simple, hand-drawn versions of a product to simulate interactions and gather feedback in the early stages of design."
+  },
+  {
+    "question": "What is 'affordance' in UX design?",
+    "type": "one choice",
+    "options": [
+      "The perceived and actual properties of an object that suggest how it should be used",
+      "The process of aligning design elements to create a visual hierarchy",
+      "The use of color and contrast to enhance readability",
+      "The ability to adapt designs for different screen sizes"
+    ],
+    "answer": "The perceived and actual properties of an object that suggest how it should be used",
+    "explanation": "Affordance refers to the properties of an object that suggest how it can be used, such as a button that looks clickable."
+  },
+  {
+    "question": "True or False: 'A/B Testing' involves comparing two versions of a design to determine which one performs better.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "A/B Testing involves comparing two versions of a design to determine which one performs better based on user interactions and metrics."
+  },
+  {
+    "question": "Which UX methodology focuses on understanding the users' needs and behaviors through in-depth interviews and observations?",
+    "type": "one choice",
+    "options": [
+      "Ethnographic Research",
+      "Surveys",
+      "Analytics",
+      "Focus Groups"
+    ],
+    "answer": "Ethnographic Research",
+    "explanation": "Ethnographic research involves in-depth interviews and observations to understand users' needs and behaviors in their natural environment."
+  },
+  {
+    "question": "Fill in the blank: The _______ framework is used to evaluate the effectiveness of an interaction design by analyzing task success rates, time on task, and user satisfaction.",
+    "type": "input",
+    "answer": "Usability Metrics",
+    "explanation": "Usability metrics include task success rates, time on task, and user satisfaction to evaluate the effectiveness of interaction design."
+  },
+  {
+    "question": "What does 'microinteraction' refer to in UX design?",
+    "type": "one choice",
+    "options": [
+      "Small, contained interactions that occur in a user interface, such as button clicks and notifications",
+      "Major interactions that define the overall user flow of a product",
+      "The integration of animations in a design system",
+      "The use of microcopy to guide user behavior"
+    ],
+    "answer": "Small, contained interactions that occur in a user interface, such as button clicks and notifications",
+    "explanation": "Microinteractions refer to small, contained interactions within a user interface, like button clicks, form submissions, and notifications."
+  },
+  {
+    "question": "True or False: 'Emotional Design' emphasizes creating experiences that evoke positive emotional responses from users.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "'Emotional Design' focuses on creating experiences that evoke positive emotional responses, enhancing user satisfaction and engagement."
+  },
+  {
+    "question": "What is the purpose of a 'design system' in UX/UI design?",
+    "type": "one choice",
+    "options": [
+      "To provide a comprehensive set of reusable components and guidelines for consistent design",
+      "To create high-fidelity prototypes for user testing",
+      "To define the visual identity of a brand",
+      "To outline the user journey and interactions"
+    ],
+    "answer": "To provide a comprehensive set of reusable components and guidelines for consistent design",
+    "explanation": "A design system provides a comprehensive set of reusable components and guidelines to ensure consistency across different design projects and products."
+  }
+]

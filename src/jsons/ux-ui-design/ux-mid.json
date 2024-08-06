@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What is the purpose of a wireframe in UX design?",
+    "type": "one choice",
+    "options": [
+      "To define the visual design of a website",
+      "To outline the structure and layout of a webpage",
+      "To create interactive prototypes",
+      "To conduct usability testing"
+    ],
+    "answer": "To outline the structure and layout of a webpage",
+    "explanation": "Wireframes are used in UX design to outline the structure and layout of a webpage, focusing on placement of elements and navigation without detailed design."
+  },
+  {
+    "question": "True or False: The 'Hick's Law' states that the time it takes to make a decision increases with the number of choices.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "'Hick's Law' states that the time it takes for users to make a decision increases as the number of choices increases, emphasizing the importance of minimizing options."
+  },
+  {
+    "question": "Which of the following is NOT a common UX research method?",
+    "type": "one choice",
+    "options": ["Surveys", "A/B Testing", "Wireframing", "Usability Testing"],
+    "answer": "Wireframing",
+    "explanation": "Wireframing is a design technique, not a UX research method. Common research methods include surveys, A/B testing, and usability testing."
+  },
+  {
+    "question": "Fill in the blank: In UX design, _______ is the process of observing users interacting with a product to understand their behavior and needs.",
+    "type": "input",
+    "answer": "user testing",
+    "explanation": "User testing involves observing users interacting with a product to gain insights into their behavior, preferences, and needs."
+  },
+  {
+    "question": "What does the 'Five Whys' technique help to identify in UX research?",
+    "type": "one choice",
+    "options": [
+      "The main features of a product",
+      "The root cause of a problem",
+      "The most popular design trends",
+      "The target user demographics"
+    ],
+    "answer": "The root cause of a problem",
+    "explanation": "The 'Five Whys' technique helps identify the root cause of a problem by repeatedly asking 'Why?' to drill down to the underlying issue."
+  },
+  {
+    "question": "Which principle suggests that design elements should be visually grouped to indicate their relatedness?",
+    "type": "one choice",
+    "options": ["Proximity", "Contrast", "Alignment", "Repetition"],
+    "answer": "Proximity",
+    "explanation": "The principle of 'Proximity' suggests that design elements should be visually grouped together to indicate that they are related or belong to the same category."
+  },
+  {
+    "question": "True or False: A high-fidelity prototype is typically more interactive and includes detailed visual design elements.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "High-fidelity prototypes are more interactive and include detailed visual design elements, offering a closer representation of the final product."
+  },
+  {
+    "question": "What does the term 'responsive design' refer to in web development?",
+    "type": "one choice",
+    "options": [
+      "Designing for multiple devices with varying screen sizes",
+      "Creating designs that respond to user feedback",
+      "Optimizing web performance",
+      "Implementing design systems"
+    ],
+    "answer": "Designing for multiple devices with varying screen sizes",
+    "explanation": "Responsive design refers to creating web designs that adapt and respond to different screen sizes and devices to ensure a consistent user experience."
+  },
+  {
+    "question": "Fill in the blank: The _______ is a set of guidelines and best practices for creating accessible and inclusive designs.",
+    "type": "input",
+    "answer": "WCAG",
+    "explanation": "The 'WCAG' (Web Content Accessibility Guidelines) provides guidelines and best practices for creating web designs that are accessible and inclusive to all users."
+  },
+  {
+    "question": "Which UX/UI concept focuses on simplifying the user interface to make it more intuitive and easier to use?",
+    "type": "one choice",
+    "options": [
+      "Minimalism",
+      "Visual Hierarchy",
+      "User Flow",
+      "Information Architecture"
+    ],
+    "answer": "Minimalism",
+    "explanation": "Minimalism in UX/UI design focuses on simplifying the user interface by reducing unnecessary elements to make it more intuitive and easier to use."
+  }
+]

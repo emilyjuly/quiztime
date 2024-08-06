@@ -1,0 +1,96 @@
+[
+  {
+    "question": "What is the main difference between SQL and NoSQL databases?",
+    "type": "one choice",
+    "options": [
+      "SQL databases use tables and rows, while NoSQL databases use documents, key-value pairs, or graphs",
+      "SQL databases are not scalable, while NoSQL databases are",
+      "SQL databases are used for unstructured data, while NoSQL databases are for structured data",
+      "SQL databases use JavaScript, while NoSQL databases use SQL"
+    ],
+    "answer": "SQL databases use tables and rows, while NoSQL databases use documents, key-value pairs, or graphs",
+    "explanation": "SQL databases are relational and use tables and rows, while NoSQL databases are non-relational and can use documents, key-value pairs, or graph structures."
+  },
+  {
+    "question": "What does ACID stand for in the context of databases?",
+    "type": "one choice",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Aggregation, Consistency, Isolation, Durability",
+      "Atomicity, Concurrency, Isolation, Durability",
+      "Atomicity, Consistency, Inheritance, Durability"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "explanation": "ACID is a set of properties that ensure database transactions are processed reliably: Atomicity, Consistency, Isolation, and Durability."
+  },
+  {
+    "question": "Fill in the blank: The _______ pattern is used to separate the concerns of an application into different layers, such as data access, business logic, and presentation.",
+    "type": "input",
+    "answer": "Layered Architecture",
+    "explanation": "The Layered Architecture pattern separates an application into different layers, such as data access, business logic, and presentation, to improve manageability and scalability."
+  },
+  {
+    "question": "Which of the following is a common approach for managing database migrations?",
+    "type": "one choice",
+    "options": [
+      "ORM tools",
+      "Schema Management Tools",
+      "Caching Layers",
+      "API Gateways"
+    ],
+    "answer": "Schema Management Tools",
+    "explanation": "Schema Management Tools are commonly used to manage database schema changes and migrations, ensuring that database structures are updated consistently across environments."
+  },
+  {
+    "question": "True or False: In a microservices architecture, each microservice should have its own database to ensure data consistency.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "In a microservices architecture, each microservice should have its own database to ensure decoupling and flexibility, but data consistency is typically managed through other strategies like eventual consistency."
+  },
+  {
+    "question": "What is the purpose of a message broker in a distributed system?",
+    "type": "one choice",
+    "options": [
+      "To route and manage messages between distributed components",
+      "To handle user authentication and authorization",
+      "To perform load balancing across multiple servers",
+      "To cache frequently accessed data"
+    ],
+    "answer": "To route and manage messages between distributed components",
+    "explanation": "A message broker facilitates communication between distributed components by routing and managing messages, enabling asynchronous and reliable messaging."
+  },
+  {
+    "question": "Fill in the blank: The _______ pattern is used to handle complex data processing workflows by breaking them into smaller, manageable steps.",
+    "type": "input",
+    "answer": "Workflow",
+    "explanation": "The Workflow pattern breaks down complex data processing tasks into smaller, manageable steps, allowing for easier management and scalability."
+  },
+  {
+    "question": "Which of the following tools is used for container orchestration?",
+    "type": "one choice",
+    "options": ["Kubernetes", "Nginx", "Redis", "Jenkins"],
+    "answer": "Kubernetes",
+    "explanation": "Kubernetes is a popular tool for container orchestration, managing the deployment, scaling, and operations of containerized applications."
+  },
+  {
+    "question": "True or False: In RESTful APIs, the PATCH method is used to partially update an existing resource.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "The PATCH method is used in RESTful APIs to make partial updates to an existing resource, as opposed to the PUT method, which replaces the entire resource."
+  },
+  {
+    "question": "Which database design concept helps in reducing data redundancy and improving data integrity?",
+    "type": "one choice",
+    "options": ["Normalization", "Denormalization", "Sharding", "Replication"],
+    "answer": "Normalization",
+    "explanation": "Normalization is a database design concept that helps reduce data redundancy and improve data integrity by organizing data into tables and ensuring that relationships between tables are maintained."
+  },
+  {
+    "question": "Fill in the blank: The _______ pattern is used to encapsulate a database query and provide a simple interface for querying data without exposing the underlying database structure.",
+    "type": "input",
+    "answer": "Repository",
+    "explanation": "The Repository pattern encapsulates data access logic, providing a simple and consistent interface for querying data while hiding the details of the database structure."
+  }
+]

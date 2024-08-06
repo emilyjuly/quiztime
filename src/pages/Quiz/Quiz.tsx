@@ -2,7 +2,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import QuizContent from '../../components/QuizContent/QuizContent';
 import QuizResult from '../../components/QuizResult/QuizResult';
 import Tag from '../../components/Tag/Tag';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import questionsMap from '../../jsons/questionsMap';
 import { useQuestions } from '../../contexts/QuizResultsContext';
@@ -20,12 +20,13 @@ const Quiz = () => {
   const [timeLeft, setTimeLeft] = useState(180);
   const timerRef = useRef<number | null>(null);
   const [isFinished, setIsFinished] = useState(false);
-  const { setQuestions } = useQuestions();
+  const { setQuestions, userLevel } = useQuestions();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        if (topic && level) {
+        if (topic && level === userLevel.toLowerCase()) {
           const questionsLoader = questionsMap[topic][level];
           if (questionsLoader) {
             const questionsModule = await questionsLoader();
@@ -33,6 +34,8 @@ const Quiz = () => {
           } else {
             console.error('Invalid topic or level');
           }
+        } else {
+          navigate('/');
         }
       } catch (error) {
         console.error('Error loading questions:', error);

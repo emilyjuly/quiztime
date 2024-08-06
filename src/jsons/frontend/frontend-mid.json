@@ -1,0 +1,85 @@
+[
+  {
+    "question": "Which of the following HTML elements is used to create a form?",
+    "type": "one choice",
+    "options": ["<input>", "<form>", "<button>", "<fieldset>"],
+    "answer": "<form>",
+    "explanation": "The <form> element is used to create a form in HTML, which can contain other elements like <input>, <button>, and <fieldset>."
+  },
+  {
+    "question": "True or False: The 'display: flex' property in CSS is used for creating a flexible layout.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "'display: flex' is a CSS property used to create a flexible and responsive layout structure."
+  },
+  {
+    "question": "Which CSS property is used to set the spacing between lines of text?",
+    "type": "one choice",
+    "options": [
+      "line-height",
+      "text-spacing",
+      "letter-spacing",
+      "word-spacing"
+    ],
+    "answer": "line-height",
+    "explanation": "The 'line-height' property in CSS sets the amount of space between lines of text."
+  },
+  {
+    "question": "What is the purpose of the 'data-' attribute in HTML?",
+    "type": "one choice",
+    "options": [
+      "To store custom data private to the page or application",
+      "To specify the size of an element",
+      "To link external CSS or JavaScript files",
+      "To provide metadata about the page"
+    ],
+    "answer": "To store custom data private to the page or application",
+    "explanation": "'data-' attributes are used to store custom data private to the page or application, which can be accessed via JavaScript."
+  },
+  {
+    "question": "Fill in the blank: The _______ property in CSS is used to align text to the center of an element.",
+    "type": "input",
+    "answer": "text-align",
+    "explanation": "The 'text-align' property in CSS is used to align text horizontally within an element. To center the text, you use 'text-align: center'."
+  },
+  {
+    "question": "Which JavaScript method is used to add an event listener to an element?",
+    "type": "one choice",
+    "options": ["addEventListener()", "attachEvent()", "on()", "bind()"],
+    "answer": "addEventListener()",
+    "explanation": "The 'addEventListener()' method is used in JavaScript to attach an event handler to a specified element."
+  },
+  {
+    "question": "What does 'npm' stand for in the context of JavaScript development?",
+    "type": "one choice",
+    "options": [
+      "Node Package Manager",
+      "Node Program Manager",
+      "Network Package Manager",
+      "Native Package Manager"
+    ],
+    "answer": "Node Package Manager",
+    "explanation": "'npm' stands for Node Package Manager, which is a package manager for the JavaScript programming language."
+  },
+  {
+    "question": "True or False: The 'async' attribute in a script tag is used to load JavaScript files asynchronously.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "The 'async' attribute in a script tag allows the browser to download the JavaScript file asynchronously without blocking the page rendering."
+  },
+  {
+    "question": "Fill in the blank: In CSS, to select an element with the ID 'header', you use the _______ selector.",
+    "type": "input",
+    "answer": "#",
+    "explanation": "In CSS, an element with a specific ID is selected using the '#' (hash) symbol followed by the ID name. For example, '#header' selects the element with the ID 'header'."
+  },
+  {
+    "question": "Which of the following is not a valid CSS unit of measurement?",
+    "type": "one choice",
+    "options": ["px", "em", "rem", "pt", "km"],
+    "answer": "km",
+    "explanation": "Units such as 'px', 'em', 'rem', and 'pt' are valid CSS units of measurement for length and size, but 'km' is not."
+  }
+]

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
-import { HiLockClosed } from 'react-icons/hi2';
+import { HiLockClosed, HiMiniUserCircle } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
 import { useQuestions } from '../../contexts/QuizResultsContext';
@@ -13,7 +13,7 @@ const ChooseATopic = () => {
   const [filter, setFilter] = useState('All');
   const topics = ['UX/UI Design', 'Backend', 'Frontend'];
   const [levels, setLevels] = useState([...levelsDefault]);
-  const { resetQuestions } = useQuestions();
+  const { resetQuestions, userLevel } = useQuestions();
 
   useEffect(() => {
     resetQuestions();
@@ -26,11 +26,13 @@ const ChooseATopic = () => {
 
   const handleStart = (topic: string, level: string) => {
     const selectedTopic = topic === 'UX/UI Design' ? 'UX' : topic;
-    navigate(
-      `/quiz?topic=${encodeURIComponent(
-        selectedTopic,
-      )}&level=${encodeURIComponent(level)}`,
-    );
+    if (userLevel === level) {
+      navigate(
+        `/quiz?topic=${encodeURIComponent(
+          selectedTopic,
+        )}&level=${encodeURIComponent(level)}`,
+      );
+    }
   };
 
   return (
@@ -56,6 +58,14 @@ const ChooseATopic = () => {
           </div>
         ))}
       </div>
+      <div className="user-container">
+        <span className="avatar">
+          <HiMiniUserCircle size={25} />
+        </span>
+        <span className="user-infos-container">
+          Your Level: <b>{userLevel}</b>
+        </span>
+      </div>
       <div className="card-choose-container">
         {levels.map((level) =>
           topics.map((topic, index) => (
@@ -69,11 +79,12 @@ const ChooseATopic = () => {
               </span>
               <button
                 onClick={() => handleStart(topic, level)}
-                className="start-button"
+                className={`start-button ${level !== userLevel && 'lock'}`}
                 type="button"
                 title="Start"
+                disabled={level !== userLevel}
               >
-                {level === 'Easy' ? 'START' : <HiLockClosed size={15} />}
+                {level === userLevel ? 'START' : <HiLockClosed size={15} />}
               </button>
             </div>
           )),

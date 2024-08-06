@@ -17,9 +17,9 @@ const questionsMap: QuestionsMap = {
 };
 
 interface QuestionsMap {
-  ux: {};
-  backend: {};
-  frontend: {};
+  [topic: string]: {
+    [level: string]: () => Promise<{ default: any }>;
+  };
 }
 
 export default questionsMap;

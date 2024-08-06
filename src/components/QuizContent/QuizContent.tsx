@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HiMiniCheck } from 'react-icons/hi2';
 import { useQuestions } from '../../contexts/QuizResultsContext';
 
@@ -11,6 +11,20 @@ interface QuizContentProps {
 const QuizContent = ({ onFinish }: QuizContentProps) => {
   const { questions, setAnswers, answers } = useQuestions();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+      return 'Are you sure you want to leave? Your progress will be lost.';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   if (questions.length === 0) {
     return <div>Loading...</div>;
@@ -63,7 +77,7 @@ const QuizContent = ({ onFinish }: QuizContentProps) => {
             />
           ))}
       </div>
-      <div className="quiz-questions-container">
+      <div className="quiz-container-questions">
         <span className="quiz-number-question">{`Question ${
           currentQuestionIndex + 1 < 10
             ? `0${currentQuestionIndex + 1}`

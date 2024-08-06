@@ -1,0 +1,105 @@
+[
+  {
+    "question": "Which of the following methods is used to prevent the default action of an event in JavaScript?",
+    "type": "one choice",
+    "options": [
+      "preventDefault()",
+      "stopPropagation()",
+      "return false",
+      "cancelDefault()"
+    ],
+    "answer": "preventDefault()",
+    "explanation": "The 'preventDefault()' method is used to prevent the default action associated with an event in JavaScript."
+  },
+  {
+    "question": "What is the purpose of the 'virtual DOM' in React?",
+    "type": "one choice",
+    "options": [
+      "To provide a way to manage application state",
+      "To improve performance by minimizing direct manipulation of the real DOM",
+      "To handle server-side rendering",
+      "To manage routing within the application"
+    ],
+    "answer": "To improve performance by minimizing direct manipulation of the real DOM",
+    "explanation": "The 'virtual DOM' in React is a lightweight copy of the real DOM used to improve performance by minimizing direct manipulation of the actual DOM."
+  },
+  {
+    "question": "In CSS Grid, what does the 'grid-template-areas' property define?",
+    "type": "one choice",
+    "options": [
+      "The size of grid items",
+      "The number of columns and rows",
+      "The layout of grid items using named grid areas",
+      "The alignment of grid items"
+    ],
+    "answer": "The layout of grid items using named grid areas",
+    "explanation": "'grid-template-areas' defines the layout of grid items by specifying named grid areas in a grid container."
+  },
+  {
+    "question": "Which of the following is a valid way to declare a global variable in a JavaScript module?",
+    "type": "one choice",
+    "options": ["var", "let", "const", "export var"],
+    "answer": "export var",
+    "explanation": "In JavaScript modules, using 'export var' allows you to declare a global variable that can be imported into other modules."
+  },
+  {
+    "question": "Fill in the blank: In React, a component's state can be updated by calling the _______ method.",
+    "type": "input",
+    "answer": "setState",
+    "explanation": "In React, the 'setState' method is used to update a component's state, causing the component to re-render with the new state."
+  },
+  {
+    "question": "What does the 'useMemo' hook do in React?",
+    "type": "one choice",
+    "options": [
+      "Caches the result of a calculation and reuses it when dependencies change",
+      "Manages component lifecycle events",
+      "Handles context management",
+      "Synchronizes state between components"
+    ],
+    "answer": "Caches the result of a calculation and reuses it when dependencies change",
+    "explanation": "The 'useMemo' hook in React caches the result of a calculation and reuses it only when the specified dependencies change, improving performance."
+  },
+  {
+    "question": "What is the purpose of 'Service Workers' in Progressive Web Apps (PWAs)?",
+    "type": "one choice",
+    "options": [
+      "To handle background synchronization and offline capabilities",
+      "To manage user authentication",
+      "To perform server-side rendering",
+      "To enhance CSS styling"
+    ],
+    "answer": "To handle background synchronization and offline capabilities",
+    "explanation": "Service Workers in PWAs are used to handle background synchronization and provide offline capabilities by intercepting network requests."
+  },
+  {
+    "question": "Which JavaScript method is used to convert a JavaScript object into a JSON string?",
+    "type": "one choice",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "Object.toJSON()",
+      "Object.stringify()"
+    ],
+    "answer": "JSON.stringify()",
+    "explanation": "The 'JSON.stringify()' method converts a JavaScript object into a JSON string, which can be stored or transmitted."
+  },
+  {
+    "question": "What is the purpose of the 'content-visibility' property in CSS?",
+    "type": "one choice",
+    "options": [
+      "To hide elements from view",
+      "To improve performance by controlling the rendering of off-screen content",
+      "To control the visibility of elements based on user interaction",
+      "To apply conditional styles based on content length"
+    ],
+    "answer": "To improve performance by controlling the rendering of off-screen content",
+    "explanation": "The 'content-visibility' property in CSS improves performance by controlling the rendering of content that is off-screen, loading it only when it becomes visible."
+  },
+  {
+    "question": "Fill in the blank: The _______ method in JavaScript is used to create a new array by applying a function to each element of an existing array.",
+    "type": "input",
+    "answer": "map",
+    "explanation": "The 'map' method creates a new array by applying a function to each element of an existing array, transforming the elements based on the provided function."
+  }
+]

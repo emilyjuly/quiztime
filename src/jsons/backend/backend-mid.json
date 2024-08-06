@@ -1,0 +1,85 @@
+[
+  {
+    "question": "Which HTTP method is used to retrieve data from a server?",
+    "type": "one choice",
+    "options": ["POST", "GET", "PUT", "DELETE"],
+    "answer": "GET",
+    "explanation": "The GET method is used to retrieve data from a server. It is one of the most commonly used HTTP methods."
+  },
+  {
+    "question": "What is the purpose of a RESTful API?",
+    "type": "one choice",
+    "options": [
+      "To provide a standardized way for clients to communicate with a server over HTTP",
+      "To enable server-side rendering of web pages",
+      "To store and manage data in a relational database",
+      "To authenticate users and manage sessions"
+    ],
+    "answer": "To provide a standardized way for clients to communicate with a server over HTTP",
+    "explanation": "A RESTful API provides a standardized way for clients to interact with a server using HTTP methods and URIs."
+  },
+  {
+    "question": "Fill in the blank: In a relational database, _______ is used to ensure that no duplicate records exist in a table.",
+    "type": "input",
+    "answer": "Primary Key",
+    "explanation": "A Primary Key is used in relational databases to uniquely identify each record in a table and ensure that no duplicate records exist."
+  },
+  {
+    "question": "Which of the following is a common database indexing technique?",
+    "type": "one choice",
+    "options": [
+      "Hash Indexing",
+      "Binary Indexing",
+      "Random Indexing",
+      "Sequential Indexing"
+    ],
+    "answer": "Hash Indexing",
+    "explanation": "Hash Indexing is a common database indexing technique that uses a hash function to quickly locate records."
+  },
+  {
+    "question": "True or False: SQL is a language used for managing and querying databases.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "SQL (Structured Query Language) is used for managing and querying data in relational databases."
+  },
+  {
+    "question": "Which of the following is an example of a NoSQL database?",
+    "type": "one choice",
+    "options": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
+    "answer": "MongoDB",
+    "explanation": "MongoDB is an example of a NoSQL database, which is designed to handle large volumes of unstructured data."
+  },
+  {
+    "question": "Fill in the blank: The _______ design pattern is used to manage object creation and ensure that only one instance of a class exists.",
+    "type": "input",
+    "answer": "Singleton",
+    "explanation": "The Singleton design pattern is used to ensure that only one instance of a class exists and provides a global point of access to that instance."
+  },
+  {
+    "question": "What is the purpose of middleware in a web application?",
+    "type": "one choice",
+    "options": [
+      "To process requests and responses before reaching the main application logic",
+      "To handle authentication and authorization of users",
+      "To provide a user interface for the application",
+      "To manage database connections and queries"
+    ],
+    "answer": "To process requests and responses before reaching the main application logic",
+    "explanation": "Middleware is used to process requests and responses, perform actions such as logging or authentication, and modify requests before they reach the main application logic."
+  },
+  {
+    "question": "True or False: In RESTful APIs, the PUT method is used to create new resources on the server.",
+    "type": "one choice",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "In RESTful APIs, the PUT method is used to update existing resources. The POST method is used to create new resources."
+  },
+  {
+    "question": "Which of the following is a common tool for managing and querying databases in a command-line interface?",
+    "type": "one choice",
+    "options": ["pgAdmin", "MySQL Workbench", "phpMyAdmin", "psql"],
+    "answer": "psql",
+    "explanation": "psql is a command-line interface for managing and querying PostgreSQL databases."
+  }
+]
