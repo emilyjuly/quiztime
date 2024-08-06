@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 import { HiLockClosed } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
+import { useQuestions } from '../../contexts/QuizResultsContext';
 
 const levelsDefault = ['Easy', 'Mid', 'Hard'];
 
@@ -12,6 +13,11 @@ const ChooseATopic = () => {
   const [filter, setFilter] = useState('All');
   const topics = ['UX/UI Design', 'Backend', 'Frontend'];
   const [levels, setLevels] = useState([...levelsDefault]);
+  const { resetQuestions } = useQuestions();
+
+  useEffect(() => {
+    resetQuestions();
+  }, []);
 
   const handleFilter = (button: string) => {
     setFilter(button);

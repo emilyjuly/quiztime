@@ -1,8 +1,8 @@
-const questionsMap = {
-  'ux/ui design': {
-    easy: () => import('./ux-ui-design/ux-ui-design-easy.json'),
-    mid: () => import('./ux-ui-design/ux-ui-design-mid.json'),
-    hard: () => import('./ux-ui-design/ux-ui-design-hard.json'),
+const questionsMap: QuestionsMap = {
+  ux: {
+    easy: () => import('./ux-ui-design/ux-easy.json'),
+    mid: () => import('./ux-ui-design/ux-mid.json'),
+    hard: () => import('./ux-ui-design/ux-hard.json'),
   },
   backend: {
     easy: () => import('./backend/backend-easy.json'),
@@ -15,5 +15,11 @@ const questionsMap = {
     hard: () => import('./frontend/frontend-hard.json'),
   },
 };
+
+interface QuestionsMap {
+  ux: {};
+  backend: {};
+  frontend: {};
+}
 
 export default questionsMap;

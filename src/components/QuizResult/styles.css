@@ -63,9 +63,9 @@
   width: 80%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: #FFF6EC;
+  background-color: #fff6ec;
   border: none;
-  z-index: 1001; 
+  z-index: 1001;
 }
 
 .quiz-result-modal.modal-open {
@@ -81,6 +81,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  margin-top: 5rem;
 }
 
 .quiz-result-question-card {
@@ -89,22 +90,22 @@
   align-items: center;
   padding: 10px 30px;
   gap: 10px;
-  background-color: #FFF6EC;
-  cursor: pointer;
-  transition: .2s;
+  background-color: #fff6ec;
+  transition: 0.2s;
 }
 
 .quiz-result-question-card:hover {
-  background-color: #FFFAF5;
-  transition: .2s;
+  background-color: #fffaf5;
+  transition: 0.2s;
 }
 
 .correct {
-  color: #28A745;
+  color: #28a745;
 }
 
 .incorrect {
-  color: #DC3545;  
+  color: #dc3545;
+  cursor: pointer;
 }
 
 .quiz-result-informations-container {
@@ -141,11 +142,11 @@
 
 .quiz-result-button {
   background-color: #21888e;
-  color: #FFF6EC;
+  color: #fff6ec;
   border: none;
   padding: 15px 5px;
   font-weight: 600;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   border-radius: 5px;
   margin: 10px 0 10px 0;
   cursor: pointer;
@@ -165,11 +166,11 @@
 }
 
 .quiz-result-incorrect-answer {
-  color: #DC3545;
+  color: #dc3545;
 }
 
 .quiz-result-correct-answer {
-  color: #28A745;
+  color: #28a745;
 }
 
 .quiz-result-title {
@@ -181,25 +182,25 @@
 }
 
 @media (min-width: 768px) {
-.quiz-result-container {
-  flex-direction: row-reverse;
-}
+  .quiz-result-container {
+    flex-direction: row-reverse;
+  }
 
-.quiz-result-points {  
-  margin-bottom: 20px;
-}
+  .quiz-result-points {
+    margin-bottom: 20px;
+  }
 
-.quiz-result-description {
-  margin-bottom: 10px;
-}
+  .quiz-result-description {
+    margin-bottom: 10px;
+  }
 
-.quiz-result-button {
- width: 15rem;
-}
+  .quiz-result-button {
+    width: 15rem;
+  }
 
-.quiz-result-questions-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 5rem;
-}
+  .quiz-result-questions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 5rem;
+  }
 }

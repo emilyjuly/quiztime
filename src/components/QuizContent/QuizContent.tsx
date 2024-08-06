@@ -1,24 +1,17 @@
 import { useState } from 'react';
-import './styles.css';
 import { HiMiniCheck } from 'react-icons/hi2';
+import { useQuestions } from '../../contexts/QuizResultsContext';
+
+import './styles.css';
 
 interface QuizContentProps {
-  questions: Question[];
+  onFinish: () => void;
 }
 
-type Question = {
-  question: string;
-  type: string;
-  options: string[];
-  answer: string;
-  explanation: string;
-};
-
-const QuizContent = ({ questions }: QuizContentProps) => {
+const QuizContent = ({ onFinish }: QuizContentProps) => {
+  const { questions, setAnswers, answers } = useQuestions();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<string[]>(
-    Array(questions.length).fill(''),
-  );
+  const [animationClass, setAnimationClass] = useState('quiz-question-enter');
 
   if (questions.length === 0) {
     return <div>Loading...</div>;
@@ -29,13 +22,21 @@ const QuizContent = ({ questions }: QuizContentProps) => {
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setAnimationClass('quiz-question-exit');
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+        setAnimationClass('quiz-question-enter');
+      }, 300);
     }
   };
 
   const handlePrev = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setAnimationClass('quiz-question-exit');
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex - 1);
+        setAnimationClass('quiz-question-enter');
+      }, 300);
     }
   };
 
@@ -50,7 +51,9 @@ const QuizContent = ({ questions }: QuizContentProps) => {
     handleAnswerChange(value);
   };
 
-  const handleFinish = () => {};
+  const handleFinish = () => {
+    onFinish();
+  };
 
   return (
     <div className="quiz-container">
@@ -65,7 +68,7 @@ const QuizContent = ({ questions }: QuizContentProps) => {
             />
           ))}
       </div>
-      <div className="quiz-container-questions">
+      <div className="quiz-questions-container">
         <span className="quiz-number-question">{`Question ${
           currentQuestionIndex + 1 < 10
             ? `0${currentQuestionIndex + 1}`

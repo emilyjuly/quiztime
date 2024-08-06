@@ -14,19 +14,13 @@
   gap: 10px;
 }
 
-.quiz-progress-container {
+.alert {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 20px 0 20px 0;
-  gap: 20px;
-}
-
-.quiz-progress-bar {
-  height: 3px;
-  background-color: #fff6ec;
-  width: 40px;
-}
-
-.quiz-progress-bar-active {
-  background-color: #21888e;
+  border: 1px solid red;
+  width: 4.5rem;
+  height: 1.2rem;
+  border-radius: 5px;
+  color: red;
 }
