@@ -8,14 +8,20 @@ type Question = {
   explanation: string;
 };
 
+type UserLevel = {
+  [topic: string]: string;
+};
+
 interface QuestionsContextType {
   questions: Question[];
   setQuestions: (questions: Question[]) => void;
   answers: string[];
   setAnswers: (answers: string[]) => void;
   resetQuestions: () => void;
-  userLevel: string;
-  setUserLevel: (level: string) => void;
+  userLevel: UserLevel;
+  setUserLevel: (
+    level: UserLevel | ((prevLevel: UserLevel) => UserLevel),
+  ) => void;
 }
 
 const QuestionsContext = createContext<QuestionsContextType | undefined>(
@@ -27,7 +33,11 @@ export const QuestionsProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<string[]>([]);
-  const [userLevel, setUserLevel] = useState<string>('Easy');
+  const [userLevel, setUserLevel] = useState<UserLevel>({
+    ux: 'Easy',
+    frontend: 'Easy',
+    backend: 'Easy',
+  });
 
   const resetQuestions = () => {
     setQuestions([]);

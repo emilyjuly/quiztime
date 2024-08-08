@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useQuestions } from '../../contexts/QuizResultsContext';
 
 import './styles.css';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 interface Result {
   question?: string;
@@ -23,7 +24,23 @@ type Question = {
   index: number;
 };
 
-const QuizResult = () => {
+type QuizResultProps = {
+  topic: string;
+};
+
+type UserResults = {
+  ux: string;
+  frontend: string;
+  backend: string;
+};
+
+const initialResults: UserResults = {
+  ux: 'Easy',
+  frontend: 'Easy',
+  backend: 'Easy',
+};
+
+const QuizResult = ({ topic }: QuizResultProps) => {
   const { questions, answers, setUserLevel, userLevel } = useQuestions();
 
   const [modal, setModal] = useState(false);
@@ -34,6 +51,12 @@ const QuizResult = () => {
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(
     null,
   );
+  const [userResults, setUserResults] = useLocalStorage<string>(
+    'results',
+    initialResults,
+  );
+
+  const normalizedTopic = topic === 'ux/ui design' ? 'ux' : topic;
 
   const suggestions = [
     {
@@ -75,10 +98,24 @@ const QuizResult = () => {
   }, [answers, questions]);
 
   const handleUserLevel = (points: number) => {
-    if (userLevel === 'Easy') {
-      points > 5 && setUserLevel('Mid');
-    } else if (userLevel === 'Mid') {
-      points > 5 && setUserLevel('Hard');
+    if (userLevel[normalizedTopic] === 'Easy') {
+      if (points > 5) {
+        const updatedLevel = {
+          ...userLevel,
+          [normalizedTopic]: 'Mid',
+        };
+        setUserLevel((prevLevel) => ({
+          ...prevLevel,
+          [normalizedTopic]: 'Mid',
+        }));
+        setUserResults(updatedLevel);
+      }
+    } else if (userLevel[normalizedTopic] === 'Mid') {
+      points > 5 &&
+        setUserLevel((prevLevel) => ({
+          ...prevLevel,
+          [normalizedTopic]: 'Hard',
+        }));
     }
   };
 

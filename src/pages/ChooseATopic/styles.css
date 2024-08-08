@@ -69,6 +69,10 @@
   width: 20rem;
 }
 
+.card-choose.completed {
+  background-color: #fdecdc;
+}
+
 .card-choose-title {
   font-weight: 600;
 }
@@ -90,25 +94,6 @@
   cursor: pointer;
   margin-bottom: 10px;
   width: 100px;
-}
-
-.user-container {
-  display: flex;
-  gap: 3px;
-  color: #21888e;
-  margin-top: 10px;
-}
-
-.avatar {
-  display: flex;
-  align-items: center;
-}
-
-.user-infos-container {
-  display: flex;
-  font-size: 12px;
-  align-items: center;
-  gap: 3px;
 }
 
 @media (min-width: 768px) {

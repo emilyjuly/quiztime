@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react';
-import './styles.css';
-import { HiLockClosed, HiMiniUserCircle } from 'react-icons/hi2';
+import { HiLockClosed, HiMiniCheck } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
 import { useQuestions } from '../../contexts/QuizResultsContext';
+import useLocalStorage from '../../hooks/useLocalStorage';
+
+import './styles.css';
+
+type UserResults = {
+  ux: string;
+  frontend: string;
+  backend: string;
+};
 
 const levelsDefault = ['Easy', 'Mid', 'Hard'];
 
@@ -13,11 +21,16 @@ const ChooseATopic = () => {
   const [filter, setFilter] = useState('All');
   const topics = ['UX/UI Design', 'Backend', 'Frontend'];
   const [levels, setLevels] = useState([...levelsDefault]);
-  const { resetQuestions, userLevel } = useQuestions();
-
+  const { resetQuestions, userLevel, setUserLevel } = useQuestions();
+  const [userResults] = useLocalStorage<UserResults>('results', {
+    ux: 'Easy',
+    frontend: 'Easy',
+    backend: 'Easy',
+  });
   useEffect(() => {
     resetQuestions();
-  }, []);
+    setUserLevel(userResults);
+  }, [setUserLevel, userResults, resetQuestions]);
 
   const handleFilter = (button: string) => {
     setFilter(button);
@@ -26,12 +39,23 @@ const ChooseATopic = () => {
 
   const handleStart = (topic: string, level: string) => {
     const selectedTopic = topic === 'UX/UI Design' ? 'UX' : topic;
-    if (userLevel === level) {
+    if (userLevel[topic] === level) {
       navigate(
         `/quiz?topic=${encodeURIComponent(
           selectedTopic,
         )}&level=${encodeURIComponent(level)}`,
       );
+    }
+  };
+
+  const getCardClass = (topic: string, level: string) => {
+    const userLevelValue = userLevel[topic];
+    if (userLevelValue === 'Hard') {
+      return (level === 'Easy' || level === 'Mid') && 'completed';
+    } else if (userLevelValue === 'Mid') {
+      return level === 'Easy' && 'completed';
+    } else {
+      return '';
     }
   };
 
@@ -58,36 +82,49 @@ const ChooseATopic = () => {
           </div>
         ))}
       </div>
-      <div className="user-container">
-        <span className="avatar">
-          <HiMiniUserCircle size={25} />
-        </span>
-        <span className="user-infos-container">
-          Your Level: <b>{userLevel}</b>
-        </span>
-      </div>
       <div className="card-choose-container">
         {levels.map((level) =>
-          topics.map((topic, index) => (
-            <div className="card-choose" key={topic}>
-              <p>{`#0${index + 1} topic`}</p>
-              <Tag content={level} />
-              <h1 className="card-choose-title">{topic}</h1>
-              <span className="min-questions-container">
-                <span>3min</span>
-                <span>10 questions</span>
-              </span>
-              <button
-                onClick={() => handleStart(topic, level)}
-                className={`start-button ${level !== userLevel && 'lock'}`}
-                type="button"
-                title="Start"
-                disabled={level !== userLevel}
+          topics.map((topic, index) => {
+            const normalizedTopic =
+              topic.toLowerCase() === 'ux/ui design'
+                ? 'ux'
+                : topic.toLowerCase();
+
+            return (
+              <div
+                className={`card-choose ${getCardClass(
+                  normalizedTopic,
+                  level,
+                )}`}
+                key={topic}
               >
-                {level === userLevel ? 'START' : <HiLockClosed size={15} />}
-              </button>
-            </div>
-          )),
+                <p>{`#0${index + 1} topic`}</p>
+                <Tag content={level} />
+                <h1 className="card-choose-title">{topic}</h1>
+                <span className="min-questions-container">
+                  <span>3min</span>
+                  <span>10 questions</span>
+                </span>
+                <button
+                  onClick={() => handleStart(normalizedTopic, level)}
+                  className={`start-button ${
+                    level !== userLevel[normalizedTopic] && 'lock'
+                  }`}
+                  type="button"
+                  title="Start"
+                  disabled={level !== userLevel[normalizedTopic]}
+                >
+                  {level === userLevel[normalizedTopic] ? (
+                    'START'
+                  ) : getCardClass(normalizedTopic, level) === 'completed' ? (
+                    <HiMiniCheck size={15} />
+                  ) : (
+                    <HiLockClosed size={15} />
+                  )}
+                </button>
+              </div>
+            );
+          }),
         )}
       </div>
     </div>

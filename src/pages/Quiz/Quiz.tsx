@@ -25,8 +25,9 @@ const Quiz = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      const topicLevel = userLevel[topic ? topic : ''].toLowerCase();
       try {
-        if (topic && level === userLevel.toLowerCase()) {
+        if (topic && level === topicLevel) {
           const questionsLoader = questionsMap[topic][level];
           if (questionsLoader) {
             const questionsModule = await questionsLoader();
@@ -93,7 +94,11 @@ const Quiz = () => {
             className={timeLeft <= 30 ? 'alert' : ''}
           />
         </div>
-        {isFinished ? <QuizResult /> : <QuizContent onFinish={handleFinish} />}
+        {isFinished ? (
+          <QuizResult topic={topic ? topic : ''} />
+        ) : (
+          <QuizContent onFinish={handleFinish} />
+        )}
       </div>
     </>
   );
