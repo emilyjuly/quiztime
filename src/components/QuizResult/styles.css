@@ -184,6 +184,7 @@
 @media (min-width: 768px) {
   .quiz-result-container {
     flex-direction: row-reverse;
+    padding: 0 6rem 0 6rem;
   }
 
   .quiz-result-points {
