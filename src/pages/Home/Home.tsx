@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import './styles.css';
 import Navbar from '../../components/Navbar/Navbar';
 import ChooseATopic from '../ChooseATopic/ChooseATopic';
+import Rules from '../Rules/Rules';
+
+import './styles.css';
 
 interface Circle {
   title: string;
@@ -74,6 +76,9 @@ const Home = () => {
       </section>
       <section id="topics">
         <ChooseATopic />
+      </section>
+      <section id="rules">
+        <Rules />
       </section>
     </div>
   );
