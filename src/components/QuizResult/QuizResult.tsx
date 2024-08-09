@@ -98,6 +98,7 @@ const QuizResult = ({ topic }: QuizResultProps) => {
   }, [answers, questions]);
 
   const handleUserLevel = (points: number) => {
+    console.log(points);
     if (userLevel[normalizedTopic] === 'Easy') {
       if (points > 5) {
         const updatedLevel = {
@@ -113,11 +114,19 @@ const QuizResult = ({ topic }: QuizResultProps) => {
         }
       }
     } else if (userLevel[normalizedTopic] === 'Mid') {
-      points > 5 &&
+      if (points > 5) {
+        const updatedLevel = {
+          ...userLevel,
+          [normalizedTopic]: 'Hard',
+        };
         setUserLevel((prevLevel) => ({
           ...prevLevel,
           [normalizedTopic]: 'Hard',
         }));
+        if (userResults) {
+          setUserResults(updatedLevel);
+        }
+      }
     }
   };
 
