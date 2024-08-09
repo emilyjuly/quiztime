@@ -108,7 +108,9 @@ const QuizResult = ({ topic }: QuizResultProps) => {
           ...prevLevel,
           [normalizedTopic]: 'Mid',
         }));
-        setUserResults(updatedLevel);
+        if (userResults) {
+          setUserResults(updatedLevel);
+        }
       }
     } else if (userLevel[normalizedTopic] === 'Mid') {
       points > 5 &&
