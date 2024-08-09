@@ -24,11 +24,6 @@ const Navbar = () => {
       section: 'topics',
       name: 'Topics',
     },
-    {
-      href: '#rules',
-      section: 'rules',
-      name: 'Rules',
-    },
   ];
 
   useEffect(() => {
