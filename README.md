@@ -66,3 +66,6 @@ http://localhost:3000
 ### 📌 Observations
 - This project was developed using the mobile first technique, so is resposive for mobile devices
 - Here you can access the project prototype in figma <a href="https://www.figma.com/design/Man69QDkg1qzneanJih4yy/Quiz-time?node-id=0-1&t=RL3q8UzDwfKcmvTj-1" target="_blank">protype</a>
+- Questions are consumed from some ready-made jsons
+- User progress is saved on local storage
+- There is an alert that appears when the user refreshes the page in the middle of a quiz, informing them that they will lose their progress
