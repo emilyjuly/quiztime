@@ -27,10 +27,11 @@ const ChooseATopic = () => {
     frontend: 'Easy',
     backend: 'Easy',
   });
+
   useEffect(() => {
     resetQuestions();
     setUserLevel(userResults);
-  }, [setUserLevel, userResults, resetQuestions]);
+  }, []);
 
   const handleFilter = (button: string) => {
     setFilter(button);

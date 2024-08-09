@@ -1,7 +1,7 @@
 .container-home {
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  overflow: hidden;
 }
 
 .container-circle {

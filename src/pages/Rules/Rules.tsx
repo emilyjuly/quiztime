@@ -97,7 +97,11 @@ const Rules = () => {
               </span>
             </div>
             {expandedIndex === index && (
-              <ol className="content-rule">
+              <ol
+                className={`content-rule ${
+                  expandedIndex === index ? 'expanded' : ''
+                }`}
+              >
                 {ruleGroup.rules.map((rule) => (
                   <li className="list-rule" key={rule.title}>
                     <span className="rule-title">{rule.title}:</span>

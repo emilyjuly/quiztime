@@ -1,20 +1,18 @@
 .container-rules {
   height: auto;
-  margin-top: 25rem;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  margin-bottom: 25rem;
+  margin: 2rem 0 25rem 0;
 }
 
 .title-rules {
-  font-size: 60px;
+  font-size: 30px;
   color: #21888e;
   font-weight: 800;
 }
 
 .subtitle-rules {
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 3px;
   color: #3f3f3f;
 }
@@ -49,9 +47,18 @@
 
 .content-rule {
   background-color: #fff6ec;
-  padding: 50px;
+  padding: 0 50px;
   margin: -1px 0px -1px 0px;
   border-bottom: 2px solid #21888e;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease, padding 0.4s ease;
+}
+
+.content-rule.expanded {
+  height: auto;
+  padding: 50px;
+  overflow: hidden;
 }
 
 .list-rule {
@@ -60,4 +67,19 @@
 
 .rule-title {
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .container-rules {
+    margin-top: 3rem;
+    padding: 30px;
+  }
+
+  .title-rules {
+    font-size: 60px;
+  }
+
+  .subtitle-rules {
+    font-size: 20px;
+  }
 }

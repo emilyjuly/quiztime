@@ -25,24 +25,21 @@ const Quiz = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const topicLevel = userLevel[topic ? topic : ''].toLowerCase();
-      try {
-        if (topic && level === topicLevel) {
-          const questionsLoader = questionsMap[topic][level];
-          if (questionsLoader) {
-            const questionsModule = await questionsLoader();
-            setQuestions(questionsModule.default);
-          } else {
-            console.error('Invalid topic or level');
-          }
+      const formatedTopics = topic === 'ux/ui design' ? 'ux' : topic;
+      const topicLevel = userLevel[formatedTopics ? formatedTopics : ''];
+      if (topic && level && level === topicLevel.toLowerCase()) {
+        const questionsLoader =
+          questionsMap[formatedTopics ? formatedTopics : ''][level];
+        if (questionsLoader) {
+          const questionsModule = await questionsLoader();
+          setQuestions(questionsModule.default);
         } else {
-          navigate('/');
+          console.error('Invalid topic or level');
         }
-      } catch (error) {
-        console.error('Error loading questions:', error);
+      } else {
+        navigate('/');
       }
     };
-
     fetchQuestions();
   }, [topic, level]);
 
@@ -83,7 +80,9 @@ const Quiz = () => {
       <Navbar />
       <div className="quiz-page-container">
         <h1 className="quiz-title">
-          {topic && topic === 'ux' ? 'UX/UI Design' : toCapitalize(topic ?? '')}
+          {topic && topic === 'ux/ui design'
+            ? 'UX/UI Design'
+            : toCapitalize(topic ?? '')}
         </h1>
         <div className="quiz-tag-container">
           <Tag content={level ? toCapitalize(level ?? '') : ''} />
